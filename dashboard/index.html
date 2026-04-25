@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pi Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="dashboard">
+
+    <!-- Build Status -->
+    <div class="panel" id="panel-builds">
+      <div class="panel-header">
+        <span class="panel-title">Builds</span>
+        <span class="panel-subtitle" id="builds-updated"></span>
+      </div>
+      <div class="panel-body" id="builds-list">
+        <div class="build-row skeleton">
+          <span class="build-repo">loading...</span>
+          <span class="build-status"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dev Logs -->
+    <div class="panel" id="panel-logs">
+      <div class="panel-header">
+        <span class="panel-title">Logs</span>
+        <div class="log-tabs" id="log-tabs">
+          <button class="tab active" data-host="vps">VPS</button>
+          <button class="tab" data-host="pi5">Pi 5</button>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div id="log-output"></div>
+      </div>
+    </div>
+
+    <!-- Camera Feed -->
+    <div class="panel" id="panel-camera">
+      <div class="panel-header">
+        <span class="panel-title">Camera</span>
+        <span class="panel-subtitle" id="camera-label">Live</span>
+      </div>
+      <div class="panel-body camera-body">
+        <img id="camera-feed" src="" alt="camera feed" />
+        <div id="camera-offline">
+          <span>Camera offline</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bible Verse -->
+    <div class="panel" id="panel-verse">
+      <div class="panel-header">
+        <span class="panel-title">Daily Verse</span>
+        <span class="panel-subtitle" id="verse-ref"></span>
+      </div>
+      <div class="panel-body verse-body">
+        <blockquote id="verse-text">Loading...</blockquote>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
